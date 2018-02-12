@@ -1,14 +1,16 @@
 class PagesController < ApplicationController
+  include PhrasesCookieStorage
+
   def index
-    @phrases = JSON.parse(cookies[:phrases]) rescue []
+    @phrases = phrases
   end
 
   def rand_phrase
     @new_phrase = "A new unique phrase #{SecureRandom.uuid}"
-    cookies[:phrases] = ((JSON.parse(cookies[:phrases]) rescue []) << @new_phrase).to_json
+    set_phrases phrases << @new_phrase
   end
 
   def clear_phrases
-    cookies[:phrases] = '[]'
+    set_phrases []
   end
 end
