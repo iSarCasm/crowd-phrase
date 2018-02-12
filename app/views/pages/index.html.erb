@@ -2,5 +2,7 @@
   <%= button_to 'Get Random Phrase', rand_phrase_path, method: :post, remote: true %>
   <%= button_to 'Clear Phrases', clear_phrases_path, method: :post, remote: true %>
   <br>
-  <%= render partial: 'pages/phrase', collection: @phrases %>
+  <div id='phrases'>
+    <%= render partial: 'pages/phrase', collection: @phrases %>
+  </div>
 </div>
