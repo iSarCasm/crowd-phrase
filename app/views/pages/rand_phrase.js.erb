@@ -1,3 +1,5 @@
+document.getElementById('new_phrase').value = 'Get New Phrase';
+
 document.getElementById('phrases').innerHTML +=
   '<%= escape_javascript render(partial: 'pages/phrase', locals: { phrase: @new_phrase }) %>';
 

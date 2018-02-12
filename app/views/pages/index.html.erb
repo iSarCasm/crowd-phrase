@@ -2,8 +2,8 @@
   <div class="row">
     <div class="col-md-6 col-md-push-3">
       <br>
-      <%= button_to 'Get New Phrase', rand_phrase_path, method: :post, remote: true, class: 'btn btn-primary col-sm-12', style: 'margin-bottom: 10px;' %>
-      <%= button_to 'Clear All Phrases', clear_phrases_path, method: :post, remote: true, class: 'btn btn-danger col-sm-12', style: 'margin-bottom: 10px;' %>
+      <%= button_to 'Get New Phrase', rand_phrase_path, method: :post, remote: true, id: 'new_phrase', class: 'btn btn-primary col-sm-12', style: 'margin-bottom: 10px;' %>
+      <%= button_to 'Clear All Phrases', clear_phrases_path, method: :post, remote: true, id: 'clear_phrases', class: 'btn btn-danger col-sm-12', style: 'margin-bottom: 10px;' %>
       <h2>
         There are <span id='phrases-left' style='color: red;'><%= phrases_left %></span> phrases left in the database.
       </h2>
