@@ -11,7 +11,11 @@ module PhrasesCookieStorage
     end
 
     def set_phrases(val)
-      cookies[:phrases] = val.to_json if val&.size <= MAX_PHRASES_COUNT
+      if val&.size <= MAX_PHRASES_COUNT
+        cookies[:phrases] = val.to_json
+      else
+        false
+      end
     end
 
     def phrases_left
