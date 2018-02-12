@@ -1,1 +1,4 @@
-document.getElementById('phrases').innerHTML += '<%= escape_javascript render(partial: 'pages/phrase', locals: { phrase: @new_phrase }) %>'
+document.getElementById('phrases').innerHTML +=
+  '<%= escape_javascript render(partial: 'pages/phrase', locals: { phrase: @new_phrase }) %>';
+
+document.getElementById('phrases-left').innerHTML = <%= phrases_left %>;

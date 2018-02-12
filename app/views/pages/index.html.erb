@@ -5,7 +5,7 @@
       <%= button_to 'Get New Phrase', rand_phrase_path, method: :post, remote: true, class: 'btn btn-primary col-sm-12', style: 'margin-bottom: 10px;' %>
       <%= button_to 'Clear All Phrases', clear_phrases_path, method: :post, remote: true, class: 'btn btn-danger col-sm-12', style: 'margin-bottom: 10px;' %>
       <h2>
-        There are <span style='color: red;'><%= 6 %> </span>phrases left in the database.
+        There are <span id='phrases-left' style='color: red;'><%= phrases_left %></span> phrases left in the database.
       </h2>
       <br>
       <ol id='phrases'>
